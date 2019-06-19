@@ -5,8 +5,7 @@ const geocode = require('./utils/geocode')
 const forcast = require('./utils/forcast')
 
 const app = express()
-// for heroku
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000   // for heroku
 
 // express config paths
 const viewsPath = path.join(__dirname, '../template/views')

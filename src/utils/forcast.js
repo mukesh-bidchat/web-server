@@ -11,7 +11,7 @@ const forcast = (latitude, longitude, callback) => {
         } else {
             const curr = body.currently            
             callback(undefined,
-                `It's currently ${curr.temperature} degrees out. There is ${Math.trunc(curr.precipProbability * 100)}% chance of rain.`)
+                `It's currently ${curr.temperature} degrees out with ${Math.trunc(curr.humidity * 100)}% humidity. There is ${Math.trunc(curr.precipProbability * 100)}% chance of rain.`)
         }
     });
 }
