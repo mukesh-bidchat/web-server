@@ -4,8 +4,9 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forcast = require('./utils/forcast')
 
-
 const app = express()
+// for heroku
+const port = process.env.PORT || 3000
 
 // express config paths
 const viewsPath = path.join(__dirname, '../template/views')
@@ -90,6 +91,6 @@ app.get('*', (req, res) => {
 
 
 // starting express server
-app.listen(3000, () => {
-    console.log("Listening to port 3000");  
+app.listen(port, () => {
+    console.log(`Listening to port ${port}`);
 })
